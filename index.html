@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- OVAJ DOKUMENT JE GLAVNA HTML STRANICA PROJEKTA -->
+<!-- 1) Spremi ovu datoteku kao index.html u root folder projekta -->
+<html lang="hr">
+<head>
+  <!-- 2) Postavljamo kodnu stranicu radi hrvatskih slova -->
+  <meta charset="UTF-8">
+  <!-- 3) Naslov stranice koji se vidi u tabu preglednika -->
+  <title>Green Tech</title>
+  <!-- 4) Povezujemo vanjsku CSS datoteku (style.css) u kojoj je sav stil -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 5) Sve što korisnik vidi ide unutar body taga -->
+
+  <!-- ===== HEADER / NAVIGACIJA ===== -->
+  <header class="header">
+    <div class="container header-inner">
+      <!-- Logo, za sada tekstualni -->
+      <div class="logo">
+      <img src="images/logo.svg" alt="Green Tech Logo" class="logo-image">
+      </div>
+
+      <!-- Navigacijski meni -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#" class="nav-link">Početna</a></li>
+          <li><a href="#" class="nav-link">Proizvodi</a></li>
+          <li><a href="#" class="nav-link">Blog</a></li>
+          <li><a href="#" class="nav-link">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <!-- Gumb "Zatraži Demo" -->
+      <a href="#" class="btn btn-primary">Zatraži Demo</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO SEKCIJA ===== -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <!-- Lijeva strana: tekst -->
+      <div class="hero-text">
+        <h1>Pametno upravljanje vašom energijom</h1>
+          <a href="#" class="btn btn-secondary">Saznaj više</a>
+      </div>
+      <!-- Desna strana: ilustracija ili slika iz Figma dizajna -->
+      <div class="hero-illustration">
+        <!-- Trenutno koristimo placeholder blok; kasnije se ovdje može staviti slika -->
+        <!-- Primjer: <img src="images/hero.png" alt="Pametno upravljanje energijom" class="hero-image"> -->
+         <img src="images/hero.svg" alt="Green Tech Hero" class="hero-image">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEKCIJA PROIZVODA (KARTICE) ===== -->
+  <section class="products">
+    <div class="container">
+      <div class="product-grid">
+        <!-- Kartica 1 -->
+        <article class="product-card">
+          <div class="product-icon">
+            <!-- Ikona proizvoda (kasnije možeš ubaciti <img> unutra) -->
+          </div>
+          <h3>Solarna ploča za pametne domove</h3>
+          <p>Visoko učinkovita solarna jedinica koja se lako integrira u kućne sustave.</p>
+        </article>
+
+        <!-- Kartica 2 -->
+        <article class="product-card">
+          <div class="product-icon"></div>
+          <h3>Pametni sustav za navodnjavanje</h3>
+          <p>Automatizirano navodnjavanje koje štedi vodu analizom vremenskih uvjeta i vlage tla.</p>
+        </article>
+
+        <!-- Kartica 3 -->
+        <article class="product-card">
+          <div class="product-icon"></div>
+          <h3>Eko punjač za električna vozila</h3>
+          <p>Brzi punjač koji koristi obnovljive izvore energije i prati potrošnju putem aplikacije.</p>
+        </article>
+
+        <!-- Kartica 4 -->
+        <article class="product-card">
+          <div class="product-icon"></div>
+          <h3>Zeleni senzor kvalitete zraka</h3>
+          <p>Prijenosni uređaj koji mjeri CO2, prašinu i vlagu - idealan za domove i urede.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KAKO NAŠ SUSTAV RADI ===== -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2>Kako naš sustav radi</h2>
+      <div class="how-grid">
+        <article class="how-card">
+          <h3>Analiza podataka</h3>
+          <p>Prikupljamo dane o potrošnji, vremenskim uvjetima i okolišu.</p>
+        </article>
+        <article class="how-card">
+          <h3>Optimizacija sustava</h3>
+          <p>Naš algoritam prilagođava rad uređaja za maksimalnu učinkovitost.</p>
+        </article>
+        <article class="how-card">
+          <h3>Automatizirana kontrola</h3>
+          <p>Sustav automatski upravlja uređajima prema optimalnim parametrima.</p>
+        </article>
+        <article class="how-card">
+          <h3>Praćenje i izvještaji</h3>
+          <p>Korisnik dobiva pregled rada i ušteda putem aplikacije.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PREDNOSTI KORIŠTENJA ===== -->
+  <section class="benefits">
+    <div class="container">
+      <h2>Prednosti korištenja Green Tech rješenja</h2>
+      <div class="benefits-grid">
+        <div class="benefit-item">Energetska učinkovitost</div>
+        <div class="benefit-item">Dugoročna održivost</div>
+        <div class="benefit-item">Pametno upravljanje</div>
+        <div class="benefit-item">Zdraviji okoliš</div>
+        <div class="benefit-item">Manji ugljični otisak</div>
+        <div class="benefit-item">Ušteda vode</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BROŠURA ===== -->
+  <section class="brochure">
+    <div class="container brochure-inner">
+      <div class="brochure-text">
+        <h3>Preuzmite našu brošuru</h3>
+        <p>Saznaj sve o našim green tech rješenjima u PDF formatu.</p>
+      </div>
+      <!-- Link za preuzimanje PDF-a (za sada je #, kasnije dodati pravi link) -->
+      <a href="#" class="btn btn-primary">Preuzmi PDF</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <!-- Kontakt -->
+      <div class="footer-contact">
+        <h4>Kontakt</h4>
+        <p>E-mail: greentech@gmail.com</p>
+        <p>Tel.: 021/556-765</p>
+      </div>
+
+      <!-- Društvene mreže -->
+      <div class="footer-social">
+        <h4>Pratite nas</h4>
+        <div class="social-links">
+          <ul>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <input type="email" class="newsletter-input" placeholder="Vaš E-mail">
+        <button class="btn btn-secondary">Subscribe</button>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

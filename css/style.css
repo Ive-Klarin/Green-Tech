@@ -1,0 +1,356 @@
+/* ================================================================= */
+/* OSNOVNE POSTAVKE ZA CIJELU STRANICU */
+/* ================================================================= */
+
+/* Reset margina i paddinga da sve krene od nule */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Stil za tijelo (body) stranice */
+body {
+  font-family: 'Montserrat', sans-serif;   /* Ovdje može ići Google font iz Figma-e */
+  color: #005267;                   /* Osnovna boja teksta */
+  background-color: #f5fbf7;        /* Svijetla pozadina */
+}
+
+/* Pomoćna klasa za centriranje sadržaja i max širinu */
+.container {
+  width: 100%;
+  max-width: 1200px;   /* Najveća širina sadržaja */
+  margin: 0 auto;      /* Centriranje */
+  padding: 0 20px;     /* Unutarnji razmak lijevo/desno */
+}
+
+/* ================================================================= */
+/* HEADER I NAVIGACIJA */
+/* ================================================================= */
+
+/* Gornji dio stranice */
+.header {
+  background-color: #F9F6F3;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding:0 20px;
+  position: sticky;
+  top: 0;
+}
+
+/* Razmještaj loga, menija i gumba */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+/* Logo (tekstualni) */
+.logo {
+  color: #005267;
+}
+
+.logo-image {
+  height: 90px;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Navigacija - linkovi u nizu */
+.nav-list {
+  display: flex;
+  gap: 60px;
+}
+
+/* Stil linkova u navigaciji */
+.nav-link {
+  text-decoration: none;
+  color: #005267;
+  font-size: 20px;
+}
+
+/* Hover efekt za linkove */
+.nav-link:hover {
+  color: #005267;
+}
+
+/* ================================================================= */
+/* GUMBI */
+/* ================================================================= */
+
+/* Osnovni stil za sve gumbe (.btn) */
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius:15px;           /* Za pill oblik gumba */
+  text-decoration: none;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Primarni gumb - zeleni */
+.btn-primary {
+  background-color: #005267;
+  color: #F9F6F3;
+}
+
+/* Sekundarni gumb - bijeli s obrubom */
+.btn-secondary {
+  background-color: transparent;
+  color: #005267;
+  border: 1px solid #005267;
+}
+
+/* ================================================================= */
+/* HERO SEKCIJA */
+/* ================================================================= */
+
+.hero {
+  padding: 120px 0;  /* Svijetla pozadina */
+                    /* Razmak gore i dolje */
+}
+
+/* Unutarnji layout: tekst lijevo, slika desno */
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Lijevi dio hero sekcije */
+.hero-text {
+  flex: 1;
+  max-width: 502px;
+}
+
+/* Naslov u hero sekciji */
+.hero-text h1 {
+  font-size: 80px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Desni dio hero sekcije (ilustracija) */
+.hero-illustration {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+}
+.hero-image {
+  width: 100%;
+  max-height: 450px;
+  height: auto;
+}
+/* ================================================================= */
+/* SEKCIJA PROIZVODA */
+/* ================================================================= */
+
+.products {
+  padding: 60px 0;
+}
+
+/* Grid za 4 kartice proizvoda */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* 4 kolone jednake širine */
+  gap: 20px;
+}
+
+/* Kartica proizvoda */
+.product-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Placeholder za ikonu proizvoda */
+.product-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: #d8f3dc;
+  margin-bottom: 10px;
+}
+
+/* Naslov u kartici proizvoda */
+.product-card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Tekst u kartici proizvoda */
+.product-card p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* ================================================================= */
+/* KAKO NAŠ SUSTAV RADI */
+/* ================================================================= */
+
+.how-it-works {
+  padding: 60px 0;
+}
+
+/* Naslov sekcije */
+.how-it-works h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Grid s 4 koraka */
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Kartica za pojedini korak */
+.how-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+/* ================================================================= */
+/* PREDNOSTI */
+/* ================================================================= */
+
+.benefits {
+  padding: 60px 0;
+}
+
+/* Naslov centriran */
+.benefits h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Grid za prednosti (3 kolone) */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* Pojedina prednost kao "pill" */
+.benefit-item {
+  background-color: #ffffff;
+  border-radius: 999px;
+  padding: 10px 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ================================================================= */
+/* BROŠURA */
+/* ================================================================= */
+
+.brochure {
+  padding: 40px 0;
+}
+
+/* Unutarnji blok brošure */
+.brochure-inner {
+  background-color: #1f7a4d;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ================================================================= */
+/* FOOTER */
+/* ================================================================= */
+
+.footer {
+  background-color: #12343b;
+  color: #ffffff;
+  padding: 40px 0;
+}
+
+/* Footer layout: 3 bloka u nizu */
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Linkovi na društvene mreže */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Stil za linkove u footeru */
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Newsletter input polje */
+.newsletter-input {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: none;
+  margin-right: 10px;
+}
+
+/* ================================================================= */
+/* RESPONSIVE DIO (ZA MANJE EKRANE) */
+/* ================================================================= */
+
+/* Za ekrane do 768px širine (tableti, manji laptopi) */
+@media (max-width: 768px) {
+  /* Hero: elementi jedan ispod drugog */
+  .hero-inner {
+    flex-direction: column;
+  }
+
+  /* Product, how i benefits grid imaju 2 kolone */
+  .product-grid,
+  .how-grid,
+  .benefits-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Footer: blokovi jedan ispod drugog */
+  .footer-inner {
+    flex-direction: column;
+  }
+
+  .brochure-inner {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+/* Za ekrane do 480px širine (mobiteli) */
+@media (max-width: 480px) {
+  /* Gridovi prelaze na 1 kolonu */
+  .product-grid,
+  .how-grid,
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
