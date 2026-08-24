@@ -154,7 +154,7 @@ ul {
 /* ================================================================= */
 
 .products {
-  padding: 60px 0;
+  padding: 90px 0;
 }
 
 /* Grid za 4 kartice proizvoda */
@@ -167,23 +167,26 @@ ul {
 /* Kartica proizvoda */
 .product-card {
   background-color: #ffffff;
-  border-radius: 16px;
+  border-radius: 20px;
   padding: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 /* Placeholder za ikonu proizvoda */
-.product-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background-color: #d8f3dc;
-  margin-bottom: 10px;
+.product-image {
+  display: block;
+  margin:0 auto;
+  transition: transform 0.3s ease;
 }
+
+.product-image:hover {
+  transform: scale(1.1);
+}
+
 
 /* Naslov u kartici proizvoda */
 .product-card h3 {
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
