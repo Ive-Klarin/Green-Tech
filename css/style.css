@@ -155,7 +155,13 @@ ul {
 /* ============================================================== */
 
 .products {
-  padding: 90px 0;
+  background-color: #cdf5e0;
+  background: linear-gradient(
+  to bottom,        /* smjer */
+  #e6faf0,         /* početna boja */
+  #ebfaf3           /* krajnja boja */
+);
+  padding: 20px 0;
 }
 
 /* Grid za 4 kartice proizvoda */
@@ -167,10 +173,7 @@ ul {
 
 /* Kartica proizvoda */
 .product-card {
-  background-color: #ffffff;
-  border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 /* Placeholder za ikonu proizvoda */
@@ -197,6 +200,7 @@ ul {
 .product-card p {
   font-size: 14px;
   line-height: 1.4;
+  font-style:italic;
 }
 
 /* ============================================================== */
@@ -229,8 +233,8 @@ ul {
 /* Naslov sekcije */
 .how-it-works h2 {
   text-align: center;
-  margin-bottom: 100px;
-  font-size: 70px;
+  margin-bottom: 80px;
+  font-size: 65px;
   font-weight: 500;
   margin-bottom: 10px;
 }
@@ -272,29 +276,38 @@ ul {
 /* ============================================================== */
 
 .benefits {
-  padding: 60px 0;
+  padding: 70px 0;
 }
 
 /* Naslov centriran */
 .benefits h2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  font-size: 50px;
+  font-weight: 500;
 }
 
 /* Grid za prednosti (3 kolone) */
 .benefits-grid {
   display: grid;
+  align-items: center;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
 
 /* Pojedina prednost kao "pill" */
 .benefit-item {
-  background-color: #ffffff;
-  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
   padding: 10px 20px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-size: 30px;
+}
+
+.benefit-image {
+  width: 70px;
+  height: 70px;
 }
 
 /* ============================================================== */
