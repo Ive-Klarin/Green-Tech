@@ -292,17 +292,21 @@ ul {
   display: grid;
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap: 10px;
 }
 
 /* Pojedina prednost kao "pill" */
 .benefit-item {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 10px 20px;
+  gap: 30px;
+  padding: 15px 20px;
   text-align: center;
   font-size: 30px;
+}
+
+.benefit-item p {
+width: 250px;
 }
 
 .benefit-image {
