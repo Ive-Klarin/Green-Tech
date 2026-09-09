@@ -35,6 +35,7 @@ body {
   padding:0 20px;
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 
 /* Razmještaj loga, menija i gumba */
@@ -176,7 +177,9 @@ ul {
 .product-image {
   display: block;
   margin:0 auto;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease;  
+  position: relative;
+  z-index: 1;
 }
 
 .product-image:hover {
