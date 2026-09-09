@@ -245,7 +245,7 @@ ul {
   display: grid;
   grid-template-columns:1fr;
   max-width: 320px;
-  gap: 70px;
+  gap: 10px;
 }
 
 /* Kartica za pojedini korak */
@@ -255,6 +255,13 @@ ul {
   border-radius: 16px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   text-align: center;
+}
+
+.arrow {
+  text-align: center;
+  font-size: 50px;
+  color: #005267;
+  line-height: 0.5;
 }
 
 /* ============================================================== */
