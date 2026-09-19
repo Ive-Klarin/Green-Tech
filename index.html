@@ -37,7 +37,7 @@
       </nav>
 
       <!-- Gumb "Zatraži Demo" -->
-      <a href="#ZATRAŽITE DEMO" download class="btn btn-primary">Zatraži Demo</a>
+      <a href="#" id="demo-btn" class="btn btn-primary">Zatraži Demo</a>
   </header>
 
   <!-- ===== HERO SEKCIJA ===== -->
@@ -209,6 +209,23 @@
       </div>
     </div>
   </footer>
+
+  <div id="demo-popup" class="popup">
+    <div class="popup-inner">
+      <h2>Zatraži Demo</h2>
+      <input type="text" placeholder="Ime i prezime" class="demo-input">
+      <input type="email" placeholder="Email" class="demo-input">
+      <input type="tel" placeholder="Telefon" class="demo-input">
+      <select class="demo-input">
+        <option>Kuća</option>
+        <option>Stan</option>
+        <option>Poslovni prostor</option>
+      </select>
+      <textarea placeholder="Poruka" class="demo-input"></textarea>
+      <a href="files/demo.pdf" download class="btn btn-primary">Preuzmi Demo</a>
+      <button id="close-demo" class="btn btn-secondary">Zatvori</button>
+    </div>
+  </div>
 
   <div id="subscribe-popup" class="popup">
     <div class="popup-inner">

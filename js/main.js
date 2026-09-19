@@ -12,3 +12,16 @@ subscribeBtn.addEventListener('click', function() {
 closeBtn.addEventListener('click', function() {
   popup.style.display = 'none';
 });
+
+const demoBtn = document.querySelector('#demo-btn');
+const demoPopup = document.getElementById('demo-popup');
+const closeDemo = document.getElementById('close-demo');
+
+demoBtn.addEventListener('click', function(e) {
+  e.preventDefault();
+  demoPopup.style.display = 'block';
+});
+
+closeDemo.addEventListener('click', function() {
+  demoPopup.style.display = 'none';
+});
