@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <!-- 5) Sve što korisnik vidi ide unutar body taga -->
@@ -28,7 +29,7 @@
       <!-- Navigacijski meni -->
       <nav class="nav">
         <ul class="nav-list">
-          <li><a href="#home" class="nav-link">Početna</a></li>
+          <li><a href="#hero" class="nav-link">Početna</a></li>
           <li><a href="#products" class="nav-link">Proizvodi</a></li>
           <li><a href="#blog" class="nav-link">Blog</a></li>
           <li><a href="#contact" class="nav-link">Kontakt</a></li>
@@ -36,17 +37,16 @@
       </nav>
 
       <!-- Gumb "Zatraži Demo" -->
-      <a href="#" class="btn btn-primary">Zatraži Demo</a>
-    </div>
+      <a href="#ZATRAŽITE DEMO" download class="btn btn-primary">Zatraži Demo</a>
   </header>
 
   <!-- ===== HERO SEKCIJA ===== -->
-  <section class="hero">
+  <section id="hero" class="hero">
     <div class="container hero-inner">
       <!-- Lijeva strana: tekst -->
       <div class="hero-text">
         <h1>Pametno upravljanje vašom energijom</h1>
-          <a href="#" class="btn btn-secondary">Saznaj više</a>
+          <a href="#benefits" class="btn btn-secondary">Saznaj više</a>
       </div>
       <!-- Desna strana: ilustracija ili slika iz Figma dizajna -->
       <div class="hero-illustration">
@@ -58,7 +58,7 @@
   </section>
 
   <!-- ===== SEKCIJA PROIZVODA (KARTICE) ===== -->
-  <section class="products">
+  <section id="products" class="products">
     <div class="container">
       <div class="product-grid">
         <!-- Kartica 1 -->
@@ -101,7 +101,7 @@
   </section>
 
   <!-- ===== KAKO NAŠ SUSTAV RADI ===== -->
-  <section class="how-it-works">
+  <section id="how-it-works" class="how-it-works">
     <div class="container">
       <div class="how-inner">
         <div class="how-left">
@@ -136,7 +136,7 @@
   </section>
 
   <!-- ===== PREDNOSTI KORIŠTENJA ===== -->
-  <section class="benefits">
+  <section id="benefits" class="benefits">
     <div class="container">
       <h2>Prednosti korištenja Green Tech rješenja</h2>
       <div class="benefits-grid">
@@ -169,10 +169,10 @@
   </section>
 
   <!-- ===== BROŠURA ===== -->
-  <section class="brochure">
+  <section id="brochure" class="brochure">
     <div class="container brochure-inner">
        <!-- Link za preuzimanje PDF-a (za sada je #, kasnije dodati pravi link) -->
-      <a href="#" class="btn btn-primary">Preuzmi PDF</a>
+      <a href="#GREEN TECH" download class="btn btn-primary">Preuzmi PDF</a>
       <div class="brochure-text">
         <h3>Preuzmite našu brošuru</h3>
         <p>Saznaj sve o našim green tech rješenjima u PDF formatu.</p>
@@ -184,7 +184,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <!-- Kontakt -->
-      <div class="footer-contact">
+      <div id="contact" class="footer-contact">
         <h4>Kontakt</h4>
         <p>E-mail: greentech@gmail.com</p>
         <p>Tel.: 021/556-765</p>
@@ -194,12 +194,10 @@
       <div class="footer-social">
         <h4>Pratite nas</h4>
         <div class="social-links">
-          <ul>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">Instagram</a></li>
-          </ul>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-instagram"></i>
         </div>
       </div>
 
@@ -207,10 +205,18 @@
       <div class="footer-newsletter">
         <h4>Newsletter</h4>
         <input type="email" class="newsletter-input" placeholder="Vaš E-mail">
-        <button class="btn btn-secondary">Subscribe</button>
+        <button class="btn btn-secondary btn-subscribe">Subscribe</button>
       </div>
     </div>
   </footer>
 
+  <div id="subscribe-popup" class="popup">
+    <div class="popup-inner">
+      <h2>Hvala na pretplati! 🎉</h2>
+      <p>Uskoro ćete primati naše novosti i ponude.</p>
+      <button class="btn btn-primary" id="close-popup">Zatvori</button>
+    </div>
+  </div>
+  <script src="./js/main.js"></script>
 </body>
 </html>
