@@ -9,6 +9,26 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-link.active {
+  font-weight: 700;
+  color: #1a8a6d;
+}
+
 /* Stil za tijelo (body) stranice */
 body {
   font-family: 'Montserrat', sans-serif;   /* Ovdje može ići Google font iz Figma-e */
