@@ -33,7 +33,8 @@ section.visible {
 body {
   font-family: 'Montserrat', sans-serif;   /* Ovdje može ići Google font iz Figma-e */
   color: #005267;                   /* Osnovna boja teksta */
-  background-color: #f5fbf7;        /* Svijetla pozadina */
+  background-color: #f5fbf7;
+  overflow-x: hidden;      /* Svijetla pozadina */
 }
 
 /* Pomoćna klasa za centriranje sadržaja i max širinu */
@@ -472,23 +473,48 @@ width: 250px;
 
 /* Za ekrane do 768px širine (tableti, manji laptopi) */
 @media (max-width: 768px) {
-  /* Hero: elementi jedan ispod drugog */
+
+  .benefit-item {
+    gap: 10px;
+    padding: 10px;
+  }
+  .benefit-item p {
+    width: auto;
+  }
+  .benefits-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 0 20px;
+    width: 100%;
+  }
+  .header-inner {
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  .nav-list {
+    display: none;
+  }
   .hero-inner {
     flex-direction: column;
   }
-
-  /* Product, how i benefits grid imaju 2 kolone */
+  .hero-text h1 {
+    font-size: 36px;
+  }
+  .how-inner {
+    flex-direction: column;
+  }
+  .how-left h2 {
+    font-size: 32px;
+  }
   .product-grid,
-  .how-grid,
   .benefits-grid {
     grid-template-columns: 1fr 1fr;
   }
-
-  /* Footer: blokovi jedan ispod drugog */
   .footer-inner {
     flex-direction: column;
   }
-
   .brochure-inner {
     flex-direction: column;
     gap: 20px;
@@ -496,11 +522,8 @@ width: 250px;
   }
 }
 
-/* Za ekrane do 480px širine (mobiteli) */
 @media (max-width: 480px) {
-  /* Gridovi prelaze na 1 kolonu */
   .product-grid,
-  .how-grid,
   .benefits-grid {
     grid-template-columns: 1fr;
   }
