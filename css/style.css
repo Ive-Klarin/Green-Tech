@@ -1,7 +1,14 @@
 /* ================================================================= */
 /* OSNOVNE POSTAVKE ZA CIJELU STRANICU */
 /* ================================================================= */
-
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #005267;
+}
 /* Reset margina i paddinga da sve krene od nule */
 * {
   margin: 0;
@@ -473,6 +480,9 @@ width: 250px;
 
 /* Za ekrane do 768px širine (tableti, manji laptopi) */
 @media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
 
   .benefit-item {
     gap: 10px;
@@ -482,7 +492,7 @@ width: 250px;
     width: auto;
   }
   .benefits-grid {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .container {
@@ -496,6 +506,19 @@ width: 250px;
   .nav-list {
     display: none;
   }
+  .nav-list.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: #F9F6F3;
+    padding: 20px;
+    gap: 20px;
+    z-index: 99;
+  } 
+
   .hero-inner {
     flex-direction: column;
   }

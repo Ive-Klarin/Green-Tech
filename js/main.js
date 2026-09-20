@@ -5,9 +5,10 @@ const closeBtn = document.getElementById('close-popup');
 const demoBtn = document.querySelector('#demo-btn');
 const demoPopup = document.getElementById('demo-popup');
 const closeDemo = document.getElementById('close-demo');
-const sections = document.querySelectorAll('section','section, footer');
+const sections = document.querySelectorAll('section, footer');
 const navLinks = document.querySelectorAll('.nav-link');
-
+const hamburger = document.getElementById('hamburger');
+const navList = document.querySelector('.nav-list');
 // Scroll na vrh pri refreshu
 history.scrollRestoration = 'manual';
 window.onbeforeunload = function() {
@@ -44,16 +45,20 @@ const animObserver = new IntersectionObserver(function(entries) {
 sections.forEach(section => animObserver.observe(section));
 
 // ===== AKTIVNI NAV LINK =====
+let scrollTimeout;
+
 const navObserver = new IntersectionObserver(function(entries) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navLinks.forEach(link => link.classList.remove('active'));
-      const activeLink = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
-      if (activeLink) activeLink.classList.add('active');
-    }
-  });
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(function() {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => link.classList.remove('active'));
+        const activeLink = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+        if (activeLink) activeLink.classList.add('active');
+      }
+    });
+  }, 100);
 }, { threshold: 0.5, rootMargin: "0px 0px -50px 0px" });
-sections.forEach(section => navObserver.observe(section));
 
 window.addEventListener('scroll', function() {
   const footer = document.getElementById('contact');
@@ -65,3 +70,13 @@ window.addEventListener('scroll', function() {
     kontaktLink.classList.add('active');
   }
 });
+
+hamburger.addEventListener('click', function() {
+  navList.classList.toggle('open');
+});
+navLinks.forEach(link => {
+  link.addEventListener('click', function() {
+    navList.classList.remove('open');
+  });
+});
+
