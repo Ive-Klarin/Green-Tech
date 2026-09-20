@@ -8,6 +8,12 @@ const closeDemo = document.getElementById('close-demo');
 const sections = document.querySelectorAll('section','section, footer');
 const navLinks = document.querySelectorAll('.nav-link');
 
+// Scroll na vrh pri refreshu
+history.scrollRestoration = 'manual';
+window.onbeforeunload = function() {
+  window.scrollTo(0, 0);
+};
+
 // ===== SUBSCRIBE POPUP =====
 subscribeBtn.addEventListener('click', function() {
   popup.style.display = 'block';
@@ -46,7 +52,7 @@ const navObserver = new IntersectionObserver(function(entries) {
       if (activeLink) activeLink.classList.add('active');
     }
   });
-}, { threshold: 0.3, rootMargin: "0px 0px -50px 0px" });
+}, { threshold: 0.5, rootMargin: "0px 0px -50px 0px" });
 sections.forEach(section => navObserver.observe(section));
 
 window.addEventListener('scroll', function() {
