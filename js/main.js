@@ -1,3 +1,5 @@
+history.scrollRestoration = 'manual';
+
 // ===== SVE VARIJABLE NA VRHU =====
 const subscribeBtn = document.querySelector('.btn-subscribe');
 const popup = document.getElementById('subscribe-popup');
@@ -9,11 +11,6 @@ const sections = document.querySelectorAll('section, footer');
 const navLinks = document.querySelectorAll('.nav-link');
 const hamburger = document.getElementById('hamburger');
 const navList = document.querySelector('.nav-list');
-// Scroll na vrh pri refreshu
-history.scrollRestoration = 'manual';
-window.onbeforeunload = function() {
-  window.scrollTo(0, 0);
-};
 
 // ===== SUBSCRIBE POPUP =====
 subscribeBtn.addEventListener('click', function() {
@@ -32,6 +29,19 @@ closeDemo.addEventListener('click', function() {
   demoPopup.style.display = 'none';
 });
 
+// ===== HAMBURGER MENI =====
+hamburger.addEventListener('click', function() {
+  navList.classList.toggle('open');
+});
+
+navLinks.forEach(link => {
+  link.addEventListener('click', function() {
+    navList.classList.remove('open');
+    navLinks.forEach(l => l.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
 // ===== ANIMACIJE POJAVLJIVANJA =====
 const animObserver = new IntersectionObserver(function(entries) {
   entries.forEach(entry => {
@@ -44,21 +54,17 @@ const animObserver = new IntersectionObserver(function(entries) {
 });
 sections.forEach(section => animObserver.observe(section));
 
-// ===== AKTIVNI NAV LINK =====
-let scrollTimeout;
-
+// ===== AKTIVNI NAV LINK PRI SCROLLU =====
 const navObserver = new IntersectionObserver(function(entries) {
-  clearTimeout(scrollTimeout);
-  scrollTimeout = setTimeout(function() {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(link => link.classList.remove('active'));
-        const activeLink = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
-        if (activeLink) activeLink.classList.add('active');
-      }
-    });
-  }, 100);
-}, { threshold: 0.5, rootMargin: "0px 0px -50px 0px" });
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => link.classList.remove('active'));
+      const activeLink = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+      if (activeLink) activeLink.classList.add('active');
+    }
+  });
+}, { threshold: 0.3 });
+sections.forEach(section => navObserver.observe(section));
 
 window.addEventListener('scroll', function() {
   const footer = document.getElementById('contact');
@@ -68,15 +74,7 @@ window.addEventListener('scroll', function() {
   if (footerTop < window.innerHeight) {
     navLinks.forEach(link => link.classList.remove('active'));
     kontaktLink.classList.add('active');
+  } else {
+    kontaktLink.classList.remove('active');
   }
 });
-
-hamburger.addEventListener('click', function() {
-  navList.classList.toggle('open');
-});
-navLinks.forEach(link => {
-  link.addEventListener('click', function() {
-    navList.classList.remove('open');
-  });
-});
-
